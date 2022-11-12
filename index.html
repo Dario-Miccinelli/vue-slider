@@ -7,17 +7,24 @@
     <title>Document</title>
 
 
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-<body>
+<body class="bg-dark text-white p-5">
     
     <div id="app">
-        {{ message }}
+
+      
+        <div class="max">
+        <H1>Space Gallery</H1>
+        <img :src="images[index].image" alt="immagini" class="rounded">
+        <button @click ="changeLeft" class="rounded bg-dark text-white">Swipe Left</button>
+        <button @click="changeRight" class="rounded bg-dark text-white">Swipe Right</button>
+    </div>
+       
       </div>
 
-
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="./assets/js/main.js"></script>
 </body>
 </html>
